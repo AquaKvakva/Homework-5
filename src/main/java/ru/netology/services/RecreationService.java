@@ -8,7 +8,7 @@ public class RecreationService {
         for (int month = 1; month <= 12; month++) {
             if (balance >= threshold) {
                 count++;
-                balance = (balance - expense) * 34 / 100 ;
+                balance = (balance - expense) / 3 ;
             } else {
                 balance = balance + income - expense;
             }
