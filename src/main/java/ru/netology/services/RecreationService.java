@@ -5,10 +5,10 @@ public class RecreationService {
     public int calcRecreation(int recreationMonth, int income, int expense, int threshold) {
         int count = 0;
         int balance = 0;
-        for (int month = 1; month < 12; month++) {
-            if (balance > threshold) {
+        for (int month = 1; month <= 12; month++) {
+            if (balance >= threshold) {
                 count++;
-                balance = (balance - expense) / 100 * 34;
+                balance = (balance - expense) * 34 / 100 ;
             } else {
                 balance = balance + income - expense;
             }
